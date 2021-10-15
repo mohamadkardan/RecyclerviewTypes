@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.recyclerviewtypes.viewmodel.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".view.fragment.HomeFragment">
+
+        <Button
+            android:id="@+id/button_vertical"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> viewModel.onClickVerticalItem(v)}"
+            android:text="vertical" />
+
+        <Button
+            android:id="@+id/button_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(v) -> viewModel.onClickHorizontalItem(v)}"
+            android:text="horizontal" />
+
+        <Button
+            android:id="@+id/button_grid"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(v) -> viewModel.onClickGridItem(v)}"
+            android:text="grid" />
+
+    </LinearLayout>
+
+</layout>
